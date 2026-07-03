@@ -959,6 +959,10 @@
     align-items: flex-start;
   }
 
+  .service-strip {
+    display: none;
+  }
+
   .header__nav nav {
     gap: 14px;
     overflow-x: auto;
