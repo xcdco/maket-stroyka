@@ -50,30 +50,32 @@ const stats = [
   { value: '3 года', label: 'официальная гарантия на работы и материалы' },
 ]
 
+const BASE = import.meta.env.BASE_URL
+
 const projectImages = [
-  '/assets/44538883.jpg',
-  '/assets/44538899.jpg',
-  '/assets/44538909.jpg',
-  '/assets/44538915.jpg',
-  '/assets/44538929.jpg',
-  '/assets/44539053.jpg',
+  `${BASE}assets/44538883.jpg`,
+  `${BASE}assets/44538899.jpg`,
+  `${BASE}assets/44538909.jpg`,
+  `${BASE}assets/44538915.jpg`,
+  `${BASE}assets/44538929.jpg`,
+  `${BASE}assets/44539053.jpg`,
 ]
 
 const reviewCards = [
   {
-    image: '/assets/33840398.png',
+    image: `${BASE}assets/33840398.png`,
     name: 'Михаил Нечаев',
     quote:
       'Этим летом решили сделать пристройку к дому. Очень довольны работой. Профессиональные строители, добросовестные люди. Всё было сделано в срок и качественно.',
   },
   {
-    image: '/assets/33840402.png',
+    image: `${BASE}assets/33840402.png`,
     name: 'Александр Граков',
     quote:
       'Спасибо компании за грамотное решение вопросов в процессе работы. Помогли с выбором материалов, всё сделали быстро, аккуратно и без неприятных сюрпризов.',
   },
   {
-    image: '/assets/33840405.png',
+    image: `${BASE}assets/33840405.png`,
     name: 'Екатерина Строганова',
     quote:
       'Приехали на следующий день, спокойно всё объяснили, вежливо ответили на вопросы и довели объект до сдачи без нареканий. Буду советовать знакомым.',
@@ -82,19 +84,19 @@ const reviewCards = [
 
 const longReviews = [
   {
-    image: '/assets/26764860.jpg',
+    image: `${BASE}assets/26764860.jpg`,
     name: 'Николай Осипов',
     text:
       'Мне нужна была бригада, способная адекватно составить смету, закупить материалы и построить объект в короткий срок. Выбрал эту команду по отзывам и гарантии по договору. Не ошибся.',
   },
   {
-    image: '/assets/32336277.jpg',
+    image: `${BASE}assets/32336277.jpg`,
     name: 'Сергей Махно',
     text:
       'Все зависит от грамотного управляющего и опытных строителей. Здесь как раз тот случай: строят как себе, берутся даже за сложные и нестандартные объекты.',
   },
   {
-    image: '/assets/41130295.jpg',
+    image: `${BASE}assets/41130295.jpg`,
     name: 'Артем Ступницкий',
     text:
       'Если еще сомневаетесь, не сомневайтесь. На этапе выбора комплектации подробно ответили на вопросы, а по цене предложение оказалось самым приятным.',
@@ -254,7 +256,7 @@ function App() {
       <header className="header">
         <div className="topbar">
           <div className="brandline">
-            <img className="brandline__logo" src="/assets/logo.webp" alt="Логотип компании" />
+            <img className="brandline__logo" src={`${BASE}assets/logo.webp`} alt="Логотип компании" />
             <div>
               <p>Строительство кровли под ключ в Москве и области с 2007 года</p>
               <span>Режим работы с 07:00 до 22:00</span>
@@ -292,11 +294,11 @@ function App() {
             </p>
             <div className="hero__features">
               <div className="feature-chip">
-                <img src="/assets/hero-icon-1.webp" alt="" />
+                <img src={`${BASE}assets/hero-icon-1.webp`} alt="" />
                 <span>Соблюдаем СНиП и ГОСТ, сами закупаем материалы</span>
               </div>
               <div className="feature-chip">
-                <img src="/assets/hero-icon-2.webp" alt="" />
+                <img src={`${BASE}assets/hero-icon-2.webp`} alt="" />
                 <span>Фиксированная цена без доплат и своя техника на объекте</span>
               </div>
             </div>
@@ -319,7 +321,7 @@ function App() {
           </div>
           <div className="hero__visual">
             <div className="hero__frame">
-              <img src="/assets/hero-bg.webp" alt="Загородный дом с новой кровлей" />
+              <img src={`${BASE}assets/hero-bg.webp`} alt="Загородный дом с новой кровлей" />
             </div>
           </div>
         </section>
@@ -498,7 +500,7 @@ function App() {
               </p>
             </div>
             <div className="company__visual">
-              <img src="/assets/41084908.png" alt="Сергей, инженер-прораб" />
+              <img src={`${BASE}assets/41084908.png`} alt="Сергей, инженер-прораб" />
               <div className="company__badge">
                 <strong>Сергей</strong>
                 <span>Инженер-прораб</span>
