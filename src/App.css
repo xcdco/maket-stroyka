@@ -31,8 +31,9 @@
   top: 0;
   z-index: 20;
   backdrop-filter: blur(18px);
-  background: rgba(248, 251, 255, 0.9);
-  border-bottom: 1px solid rgba(16, 33, 62, 0.08);
+  background: rgba(248, 251, 255, 0.92);
+  border-bottom: 1px solid rgba(16, 33, 62, 0.06);
+  box-shadow: 0 4px 24px rgba(17, 36, 68, 0.06);
 }
 
 .topbar,
@@ -49,7 +50,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 24px;
-  padding: 18px 0 14px;
+  padding: 14px 0;
 }
 
 .brandline {
@@ -59,10 +60,12 @@
 }
 
 .brandline__logo {
-  width: 54px;
-  height: 54px;
+  width: 46px;
+  height: 46px;
   object-fit: cover;
   filter: hue-rotate(82deg) saturate(1.45) brightness(1.02);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(23, 61, 120, 0.12);
 }
 
 .brandline p,
@@ -78,54 +81,84 @@
 }
 
 .brandline p {
-  margin: 0 0 4px;
-  font-size: 0.98rem;
+  margin: 0 0 2px;
+  font-size: 0.92rem;
   font-weight: 600;
 }
 
 .brandline span {
   color: var(--muted);
-  font-size: 0.92rem;
+  font-size: 0.82rem;
 }
 
 .topbar__phone {
-  color: var(--primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #173d78, #345d9b);
+  color: white;
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   font-weight: 700;
   white-space: nowrap;
+  box-shadow: 0 4px 14px rgba(23, 61, 120, 0.22);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.topbar__phone:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(23, 61, 120, 0.3);
 }
 
 .header__nav {
-  padding-bottom: 16px;
+  padding-bottom: 12px;
+  border-top: 1px solid rgba(16, 33, 62, 0.06);
 }
 
 .service-strip {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 14px;
+  gap: 6px;
+  margin-bottom: 10px;
+  padding-top: 10px;
 }
 
 .service-strip span {
-  padding: 8px 12px;
+  padding: 5px 11px;
   border-radius: 999px;
-  background: rgba(23, 61, 120, 0.08);
-  border: 1px solid rgba(23, 61, 120, 0.12);
+  background: rgba(23, 61, 120, 0.06);
+  border: 1px solid rgba(23, 61, 120, 0.08);
   color: var(--primary);
-  font-size: 0.84rem;
+  font-size: 0.78rem;
+  transition: background 180ms ease, border-color 180ms ease;
+}
+
+.service-strip span:hover {
+  background: rgba(23, 61, 120, 0.12);
+  border-color: rgba(23, 61, 120, 0.18);
 }
 
 .header__nav nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 22px;
+  gap: 6px;
 }
 
 .header__nav nav a {
   color: var(--ink);
   text-decoration: none;
-  font-size: 0.94rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 999px;
+  transition: background 180ms ease, color 180ms ease;
+}
+
+.header__nav nav a:hover {
+  background: rgba(23, 61, 120, 0.08);
+  color: var(--primary);
 }
 
 .hero {
